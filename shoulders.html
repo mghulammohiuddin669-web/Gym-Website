@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { display: ["Bebas Neue", "sans-serif"], body: ["DM Sans", "sans-serif"] },
+          colors: { cream: "#f5f2ee", ink: "#0f0f0f", lime: "#c8ff00" },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .parallax-hero { background-image: url('IMG/shoulders.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .card-img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.5s ease; }
+    .exercise-card:hover .card-img { transform: scale(1.06); }
+  </style>
+  <title>Shoulders — Snap Fitness</title>
+</head>
+<body class="bg-gray-900 font-body">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 bg-gray-900/90 backdrop-blur-md border-b border-white/10">
+    <div class="w-[150px]"><a href="index.html"><img src="IMG/snapFitness.png" alt="LOGO"/></a></div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a href="index.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Home</a>
+      <a href="index.html#exercise" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Exercises</a>
+      <a href="contact.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Contact</a>
+      
+    </div>
+  </nav>
+
+  <div class="parallax-hero h-screen flex items-center justify-center relative">
+    <div class="absolute inset-0 bg-black/65"></div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-yellow-400 text-sm tracking-widest uppercase font-medium mb-3">Snap Fitness</p>
+      <h1 class="font-display text-8xl md:text-[10rem] text-white leading-none">SHOULDERS</h1>
+      <p class="text-gray-300 mt-4 text-lg max-w-xl mx-auto">Build wide, powerful shoulders — the muscles that create the V-taper physique.</p>
+      <div class="flex gap-4 justify-center mt-8 flex-wrap">
+        <a href="#beginner" class="bg-green-500 text-white px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Beginner</a>
+        <a href="#intermediate" class="bg-yellow-400 text-gray-900 px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Intermediate</a>
+        <a href="#advanced" class="bg-red-500 text-white px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Advanced</a>
+      </div>
+      <div class="mt-12 animate-bounce"><svg class="w-6 h-6 text-yellow-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div>
+    </div>
+  </div>
+
+  <div class="sticky top-[72px] z-40 bg-gray-900/95 backdrop-blur-md border-b border-white/10 px-10 py-3 flex gap-6 overflow-x-auto">
+    <a href="#beginner" class="text-sm font-medium text-gray-400 hover:text-green-400 transition-colors whitespace-nowrap flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span> Beginner</a>
+    <a href="#intermediate" class="text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-yellow-400 inline-block"></span> Intermediate</a>
+    <a href="#advanced" class="text-sm font-medium text-gray-400 hover:text-red-400 transition-colors whitespace-nowrap flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400 inline-block"></span> Advanced</a>
+    <a href="#tips" class="text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-400 inline-block"></span> Pro Tips</a>
+  </div>
+
+  <!-- BEGINNER -->
+  <section id="beginner" class="px-10 py-20 border-b border-white/10">
+    <div class="flex items-center gap-4 mb-3"><span class="w-3 h-3 rounded-full bg-green-400 inline-block"></span><p class="text-green-400 text-xs tracking-widest uppercase font-medium">Level 01</p></div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">BEGINNER</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Shoulder stability, form, all three heads activated</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">3 sets</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">60–90s rest</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">Light weight</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/dumbellShoulderPress.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">01</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">DUMBBELL SHOULDER PRESS</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">The foundation of shoulder pressing. Seated version for beginners — back supported, full press overhead.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Front Delt</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Side Delt</span></div>
+          <a href="https://www.youtube.com/watch?v=qEwKCR5JCog" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/LATERAL RAISE.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">02</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">LATERAL RAISE</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Targets the side delt — the muscle that creates shoulder width. Slight bend in elbows, raise to shoulder height only.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Side Delt</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Width</span></div>
+          <a href="https://www.youtube.com/watch?v=3VcKaXpzqRo" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/frontRaise.png" alt="" class="card-img"><span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">03</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">FRONT RAISE</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Isolates the anterior (front) deltoid. Use light weight — raise one arm at a time or both. Stop at shoulder level.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Front Delt</span></div>
+          <a href="https://www.youtube.com/watch?v=gkh1IFdSMqo" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/reverse.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">04</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">REVERSE PEC DECK</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Machine-based rear delt exercise. Sit facing the pad, arms wide, pull back in a wide arc. Essential for balanced shoulders.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Rear Delt</span></div>
+          <a href="https://www.youtube.com/watch?v=k0J0PsslLos" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERMEDIATE -->
+  <section id="intermediate" class="px-10 py-20 border-b border-white/10 bg-gray-800/30">
+    <div class="flex items-center gap-4 mb-3"><span class="w-3 h-3 rounded-full bg-yellow-400 inline-block"></span><p class="text-yellow-400 text-xs tracking-widest uppercase font-medium">Level 02</p></div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">INTERMEDIATE</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Full delt development, strength + volume increase</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">3–4 sets</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">90s rest</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">Moderate–Heavy</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/barbellraise.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">01</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">BARBELL SHOULDER PRESS</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Standing or seated, the barbell allows heavier loads than dumbbells. Press overhead, lower to chin level.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">6–10</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">All Heads</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Strength</span></div>
+          <a href="https://www.youtube.com/watch?v=2yjwXTZQDDI" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/LATERAL RAISE.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">02</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">LATERAL RAISE</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Go heavier now with cable or dumbbell. Add a slight lean away for better side delt stretch at the bottom.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Side Delt</span></div>
+          <a href="https://www.youtube.com/watch?v=3VcKaXpzqRo" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/RareDeltFly.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">03</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">REAR DELT FLY</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Bent-over dumbbell fly or cable. Targets the posterior delt which most people ignore — critical for posture and balance.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Rear Delt</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Posture</span></div>
+          <a href="https://www.youtube.com/watch?v=EA7u4Q_8HQ0" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/arnoldPress.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">04</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">ARNOLD PRESS</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Start with palms facing you, rotate as you press up. Hits all three delt heads in one movement — invented by Schwarzenegger.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">8–10</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">All 3 Heads</span></div>
+          <a href="https://www.youtube.com/watch?v=6Z15_WdXmVw" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/facepull1.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">05</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">FACE PULL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Cable rope to forehead, elbows high. Builds rear delts and protects shoulder joints from overuse injuries.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Rear Delt</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Health</span></div>
+          <a href="https://www.youtube.com/watch?v=rep-qVOkqgk" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANCED -->
+  <section id="advanced" class="px-10 py-20 border-b border-white/10">
+    <div class="flex items-center gap-4 mb-3"><span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span><p class="text-red-400 text-xs tracking-widest uppercase font-medium">Level 03</p></div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">ADVANCED</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Maximum shoulder size, strength, and trap development</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">4–5 sets</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">2 min rest</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">Heavy</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/barbellraise.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">01</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">BARBELL SHOULDER PRESS</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Max load. Standing press for full core activation. Work up to near-maximal effort on final sets.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">5</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4–8</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Strength</span><span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">Heavy</span></div>
+          <a href="https://www.youtube.com/watch?v=2yjwXTZQDDI" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/arnoldPress.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">02</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">ARNOLD PRESS</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Heavy Arnold press as secondary compound. Full rotation, slow and controlled on descent.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">8–10</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">All 3 Heads</span></div>
+          <a href="https://www.youtube.com/watch?v=6Z15_WdXmVw" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/LATERAL RAISE.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">03</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">LATERAL RAISE</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Cable lateral raise for constant tension. Add drop sets on final set — reduce weight, continue to failure.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Side Delt</span><span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">Drop Set</span></div>
+          <a href="https://www.youtube.com/watch?v=3VcKaXpzqRo" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/RareDeltFly.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">04</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">REAR DELT FLY</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Heavy bent-over fly with a pause at full extension. Keeps shoulders healthy and visually complete from behind.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Rear Delt</span></div>
+          <a href="https://www.youtube.com/watch?v=EA7u4Q_8HQ0" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/shrugs.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">05</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">SHRUG</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Barbell or dumbbell shrugs for trap development. Hold at top for 2 seconds — don't roll your shoulders.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Traps</span><span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">Heavy</span></div>
+          <a href="https://www.youtube.com/watch?v=g6qbq4Lf1FI" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO TIPS -->
+  <section id="tips" class="px-10 py-20 bg-gray-800/30 border-b border-white/10">
+    <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-2">Expert Advice</p>
+    <h2 class="font-display text-5xl text-white mb-10">PRO TIPS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10"><div class="text-3xl mb-4">⚠️</div><h3 class="text-white font-semibold mb-2">Warm Up First</h3><p class="text-gray-400 text-sm leading-relaxed">Shoulders are the most injury-prone joint. Always do 2 sets of face pulls and band rotations before pressing.</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10"><div class="text-3xl mb-4">📐</div><h3 class="text-white font-semibold mb-2">Don't Go Too Wide</h3><p class="text-gray-400 text-sm leading-relaxed">On lateral raises, stop at shoulder height. Going higher shifts load to traps and impinges the shoulder joint.</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10"><div class="text-3xl mb-4">🔄</div><h3 class="text-white font-semibold mb-2">Train All 3 Heads</h3><p class="text-gray-400 text-sm leading-relaxed">Front, side, and rear deltoids. Most people only train front and side — the rear delt is what makes shoulders look 3D.</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10"><div class="text-3xl mb-4">💡</div><h3 class="text-white font-semibold mb-2">Light Is Enough</h3><p class="text-gray-400 text-sm leading-relaxed">Lateral raises with 5–8kg and perfect form beat 20kg with momentum. Slow down, feel the burn in the right place.</p></div>
+    </div>
+  </section>
+
+  <div class="px-10 py-10 flex items-center justify-between">
+    <a href="back.html" class="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors text-sm font-medium">← Back Exercises</a>
+    <a href="index.html#exercise" class="text-sm text-gray-400 hover:text-yellow-400 transition-colors">All Exercises</a>
+    <a href="bicep_tricep.html" class="text-sm text-gray-400 hover:text-yellow-400 transition-colors">Bicep/Tricep →</a>
+  </div>
+
+  <footer class="bg-ink text-white/40 px-10 py-6 flex justify-between items-center text-sm border-t border-white/10">
+    <div class="font-display text-cream text-xl tracking-widest">Snap <span class="text-yellow-400">Fitness</span></div>
+    <div>© 2026 Snap Fitness Gym. All rights reserved.</div>
+  </footer>
+  <script src="JS/contact.js"></script>
+</body>
+</html>

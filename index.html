@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Bebas Neue", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+            colors: {
+              cream: "#f5f2ee",
+              ink: "#0f0f0f",
+              lime: "#c8ff00",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+
+      .parallax-hero {
+  background-image: url('IMG/download.jfif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Gym</title>
+  </head>
+
+  <body class="bg-gray-800 font-body">
+    <header>
+      <nav
+        class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 bg-cream/20 backdrop-blur-md border-b border-black/10 h-[150px]"
+      >
+        <div id="img" class="w-[150px]">
+          <a href="index.html"><img src="IMG/snapFitness.png" alt="LOGO" /></a>
+        </div>
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            href="#home"
+            class="text-sm font-medium text-white hover:text-ink transition-colors"
+            >Home</a
+          >
+          <a
+            href="#howItWorks"
+            class="text-sm font-medium text-white hover:text-ink transition-colors"
+            >How it work</a
+          >
+          <a
+            href="#exercise"
+            class="text-sm font-medium text-white hover:text-ink transition-colors"
+            >Exercises</a
+          >
+          <a
+            href="contact.html"
+            class="text-sm font-medium text-white hover:text-ink transition-colors"
+            >Contact</a
+          >
+          <a href="#model"            >
+            <button
+              onclick="openModal()"
+              class="text-sm px-5 py-2 font-medium text-white hover:text-ink bg-black hover:bg-lime hover:text-black p-[5px] rounded-md transition-all duration-300 hover:scale-110"
+            >
+              Join Now
+            </button></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- MODAL OVERLAY -->
+    <div
+      id="modal"
+      class="hidden fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4"
+    >
+      <!-- MODAL BOX -->
+      <div
+        class="bg-gray-800/80 rounded-xl w-full max-w-lg max-h-[90vh] overflow-y-auto relative p-8"
+      >
+        <!-- CLOSE BUTTON -->
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 text-white hover:text-yellow-400 text-2xl font-bold transition-colors"
+        >
+          ✕
+        </button>
+
+        <!-- FORM YAHAN PASTE KARO -->
+        <!-- tumhara poora form ka content -->
+        <!-- <div class="min-h-screen flex items-center justify-center pt-20">
+      <div class="bg-white/20 p-8 rounded-xl w-full max-w-lg">
+  
+      </div>
+    </div> -->
+        <form>
+          <div
+            id="error"
+            class="hidden bg-red-100 text-red-700 p-3 rounded-lg text-center mb-4"
+          ></div>
+
+          <div>
+            <label for="" class="text-yellow-400 text-sm font-medium"
+              >Your Name*</label
+            >
+            <br />
+            <input
+              type="text"
+              id="name"
+              class="w-full bg-gray-700 text-white border border-gray-700 rounded-md px-2 py-2 mb-4 focus:outline-none focus:border-yellow-400"
+            />
+          </div>
+          <div>
+            <label for="" class="text-yellow-400 text-sm font-medium"
+              >Your Email*</label
+            >
+            <br />
+            <input
+              type="email"
+              id="email"
+              class="w-full bg-gray-700 text-white border border-gray-700 rounded-md px-2 py-2 mb-4 focus:outline-none focus:border-yellow-400"
+            />
+          </div>
+          <div>
+            <label for="" class="text-yellow-400 text-sm font-medium"
+              >Your Phone*</label
+            >
+            <br />
+            <input
+              type="text"
+              id="phoneNumber"
+              class="w-full bg-gray-700 text-white border border-gray-700 rounded-md px-2 py-2 mb-4 focus:outline-none focus:border-yellow-400"
+            />
+          </div>
+          <div>
+            <label for="age" class="text-yellow-400 text-sm font-medium"
+              >Your Age*</label
+            >
+            <br />
+            <input
+              type="number"
+              id="age"
+              class="w-full bg-gray-700 text-white border border-gray-700 rounded-md px-2 py-2 mb-4 focus:outline-none focus:border-yellow-400"
+            />
+          </div>
+
+          <div>
+            <label for="gender" class="text-yellow-400 text-sm font-medium"
+              >Select Gender*</label
+            ><br />
+            <select
+              size="1"
+              id="gender"
+              class="overflow-hidden w-full bg-gray-700 border border-gray-600 text-white rounded-md px-3 py-2 mb-4 focus:outline-none focus:border-yellow-400 appearance-none"
+            >
+              <option value="gender" selected disabled>Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label class="text-yellow-400 text-sm font-medium"
+              >Calculate Your BMI</label
+            >
+
+            <div class="flex gap-3 mt-1">
+              <div class="flex-1">
+                <label class="text-yellow-400 text-xs font-medium"
+                  >Weight (kg)</label
+                ><br />
+                <input
+                  type="number"
+                  id="weight"
+                  placeholder="70"
+                  class="appearance-none w-full bg-gray-700 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:border-yellow-400"
+                />
+              </div>
+              <div class="flex-1">
+                <label class="text-yellow-400 text-xs font-medium"
+                  >Height (feet)</label
+                ><br />
+                <input
+                  type="number"
+                  id="heightInFeet"
+                  placeholder="5"
+                  class="appearance-none w-full bg-gray-700 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:border-yellow-400"
+                />
+              </div>
+              <div class="flex-1">
+                <label class="text-yellow-400 text-xs font-medium"
+                  >Height (inches)</label
+                ><br />
+                <input
+                  type="number"
+                  id="heightInInches"
+                  placeholder="8"
+                  class="appearance-none w-full bg-gray-700 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:border-yellow-400"
+                />
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <label class="text-yellow-400 text-xs font-medium"
+                >Your BMI*</label
+              ><br />
+              <input
+                type="number"
+                id="bmi"
+                placeholder="Calculate above or enter manually"
+                class="w-full bg-gray-700 border border-gray-600 text-white rounded-md px-3 py-2 mt-1 focus:outline-none focus:border-yellow-400"
+              />
+            </div>
+          </div>
+          <button
+            type="button"
+            onclick="
+              bmiCalculator();
+              validation();
+            "
+            class="w-full bg-yellow-400 text-gray-900 font-semibold py-3 rounded-md mt-4 hover:bg-yellow-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/30 transition-all duration-300"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+  <div id="home" class="parallax-hero h-screen flex items-center justify-center relative">
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/40"></div>
+  <!-- Content -->
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <div class="border-2 border-white px-6 py-2 text-white font-black text-3xl rounded-3xl hover:bg-lime hover:text-black transition-all hover:cursor-pointer">
+      <button type="button" class="font-display tracking-widest transition-all duriation-300 hover:scale-110">Scan QR Code</button>
+    </div>
+  </div>
+</div>
+
+    <section id="howItWorks" class="bg-black text-cream px-10 py-24">
+      <h2 class="font-display text-5xl md:text-6xl">
+        SCAN. <span class="text-lime">LEARN.</span> LIFT.
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <div class="border border-white/10 p-8">
+          <p class="font-display text-6xl text-lime opacity-30">01</p>
+          <p class="text-base font-semibold mt-2">Find a Machine</p>
+          <p class="text-sm text-white/50 mt-2 leading-relaxed">
+            Walk up to any gym equipment. You'll see a QR code sticker attached
+            to the machine.
+          </p>
+        </div>
+        <div class="border border-white/10 p-8">
+          <p class="font-display text-6xl text-lime opacity-30">02</p>
+          <p class="text-base font-semibold mt-2">Scan the Code</p>
+          <p class="text-sm text-white/50 mt-2 leading-relaxed">
+            Open your phone camera or any QR scanner app and point it at the
+            code.
+          </p>
+        </div>
+        <div class="border border-white/10 p-8">
+          <p class="font-display text-6xl text-lime opacity-30">03</p>
+          <p class="text-base font-semibold mt-2">Learn & Train</p>
+          <p class="text-sm text-white/50 mt-2 leading-relaxed">
+            Get instant access to usage guide, safety tips, muscles worked, and
+            demo video.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="exercise"
+      class="bg-cream text-black px-10 py-24 transition-all"
+    >
+      <h2 class="font-display text-5xl md:text-6xl">Excercise</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <a
+          href="chest.html"
+          class="group border border-black/10 p-8 block cursor-pointer transition-all duration-300 hover:bg-ink hover:border-ink"
+        >
+          <p
+            class="font-display text-6xl text-lime transition-all duration-300 group-hover:scale-110 group-hover:text-lime inline-block"
+          >
+            Chest
+          </p>
+          <p
+            class="text-base font-semibold mt-2 transition-all duration-300 group-hover:text-white"
+          >
+            Chest Exercices
+          </p>
+          <p
+            class="text-sm text-black mt-2 leading-relaxed transition-all duration-300 group-hover:text-white/70"
+          >
+            See all the exercise here for chest for beginer/intermediate/advance
+            levels.
+          </p>
+        </a>
+
+        <a
+          href="back.html"
+          class="group border border-black/10 p-8 block cursor-pointer transition-all duration-300 hover:bg-ink hover:border-ink"
+        >
+          <p
+            class="font-display text-6xl text-lime transition-all duration-300 group-hover:scale-110 inline-block"
+          >
+            Back
+          </p>
+          <p
+            class="text-base font-semibold mt-2 transition-all duration-300 group-hover:text-white"
+          >
+            Back Exercices
+          </p>
+          <p
+            class="text-sm text-black mt-2 leading-relaxed transition-all duration-300 group-hover:text-white/70"
+          >
+            See all the exercise here for Back for beginer/intermediate/advance
+            levels.
+          </p>
+        </a>
+
+        <a
+          href="bicep_tricep.html"
+          class="group border border-black/10 p-8 block cursor-pointer transition-all duration-300 hover:bg-ink hover:border-ink"
+        >
+          <p
+            class="font-display text-6xl text-lime transition-all duration-300 group-hover:scale-110 inline-block break-words"
+          >
+            Bicep/Tricep
+          </p>
+          <p
+            class="text-base font-semibold mt-2 transition-all duration-300 group-hover:text-white"
+          >
+            Bicep/Tricep Exercices
+          </p>
+          <p
+            class="text-sm text-black mt-2 leading-relaxed transition-all duration-300 group-hover:text-white/70"
+          >
+            See all the exercise here for Bicep/Tricep for
+            beginer/intermediate/advance levels.
+          </p>
+        </a>
+
+        <a
+          href="shoulders.html"
+          class="group border border-black/10 p-8 block cursor-pointer transition-all duration-300 hover:bg-ink hover:border-ink"
+        >
+          <p
+            class="font-display text-6xl text-lime transition-all duration-300 group-hover:scale-110 inline-block"
+          >
+            Shoulders
+          </p>
+          <p
+            class="text-base font-semibold mt-2 transition-all duration-300 group-hover:text-white"
+          >
+            Shoulders Exercices
+          </p>
+          <p
+            class="text-sm text-black mt-2 leading-relaxed transition-all duration-300 group-hover:text-white/70"
+          >
+            See all the exercise here for Shoulders for
+            beginer/intermediate/advance levels.
+          </p>
+        </a>
+
+        <a
+          href="abs.html"
+          class="group border border-black/10 p-8 block cursor-pointer transition-all duration-300 hover:bg-ink hover:border-ink"
+        >
+          <p
+            class="font-display text-6xl text-lime transition-all duration-300 group-hover:scale-110 inline-block"
+          >
+            Abs
+          </p>
+          <p
+            class="text-base font-semibold mt-2 transition-all duration-300 group-hover:text-white"
+          >
+            Abs Exercices
+          </p>
+          <p
+            class="text-sm text-black mt-2 leading-relaxed transition-all duration-300 group-hover:text-white/70"
+          >
+            See all the exercise here for Abs for beginer/intermediate/advance
+            levels.
+          </p>
+        </a>
+
+        <a
+          href="legs.html"
+          class="group border border-black/10 p-8 block cursor-pointer transition-all duration-300 hover:bg-ink hover:border-ink"
+        >
+          <p
+            class="font-display text-6xl text-lime transition-all duration-300 group-hover:scale-110 inline-block"
+          >
+            Legs
+          </p>
+          <p
+            class="text-base font-semibold mt-2 transition-all duration-300 group-hover:text-white"
+          >
+            Legs Exercices
+          </p>
+          <p
+            class="text-sm text-black mt-2 leading-relaxed transition-all duration-300 group-hover:text-white/70"
+          >
+            See all the exercise here for Legs for beginer/intermediate/advance
+            levels.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <section
+      class="bg-stone-100 px-10 py-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+    >
+      <div>
+        <h2 class="font-display text-4xl md:text-5xl leading-tight">
+          EVERY MACHINE HAS ITS OWN QR CODE
+        </h2>
+        <p class="text-gray-500 mt-4 leading-relaxed">
+          No need to ask a trainer for basic setup help. Everything you need is
+          one scan away — available 24/7, right at the machine.
+        </p>
+        <button
+          onclick="
+            document
+              .getElementById('machines')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+          class="mt-8 bg-ink text-cream px-8 py-3 text-sm font-semibold tracking-wide hover:bg-lime hover:text-ink inline-block transition-transform duration-300 hover:scale-110"
+        >
+          Scan
+        </button>
+      </div>
+      <div class="flex justify-center items-center">
+        <img src="IMG/unnamed.png" alt="" class="w-full max-w-[250px] h-auto" />
+      </div>
+    </section>
+
+    <footer
+      class="bottom-0 left-0 right-0 bg-ink text-white/40 pb-0 font-bold px-10 py-1 flex justify-between items-center text-sm"
+    >
+      <div class="font-display text-cream text-xl tracking-widest">
+        Snap <span class="text-yellow-400">Fitness</span>
+      </div>
+      <div>© 2026 Snap Fitness Gym. All rights reserved.</div>
+    </footer>
+
+    <script src="JS/bmiCalculator.js"></script>
+    <script src="JS/contact.js"></script>
+  </body>
+</html>

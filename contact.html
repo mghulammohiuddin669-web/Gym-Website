@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Bebas Neue", "sans-serif"],
+            body: ["DM Sans", "sans-serif"],
+          },
+          colors: {
+            cream: "#f5f2ee",
+            ink: "#0f0f0f",
+            lime: "#c8ff00",
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .parallax-hero {
+      background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px #1f2937 inset !important;
+      -webkit-text-fill-color: white !important;
+    }
+  </style>
+  <title>Contact — Snap Fitness</title>
+</head>
+
+<body class="bg-gray-800 font-body">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 bg-gray-800/80 backdrop-blur-md border-b border-white/10">
+    <div class="w-[150px]">
+      <a href="index.html"><img src="IMG/snapFitness.png" alt="LOGO"/></a>
+    </div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a href="index.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Home</a>
+      <a href="index.html#howItWorks" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">How it works</a>
+      <a href="index.html#exercise" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Excercise</a>
+      <a href="#contact" class="text-sm font-medium text-yellow-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PARALLAX HERO -->
+  <div class="parallax-hero h-screen flex items-center justify-center relative">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+    <!-- Text -->
+    <div class="relative z-10 text-center">
+      <p class="text-yellow-400 text-sm tracking-widest uppercase font-medium mb-3">Get in touch</p>
+      <h1 class="font-display text-7xl md:text-9xl text-white">CONTACT US</h1>
+      <p class="text-gray-300 mt-4 text-lg">We'd love to hear from you</p>
+      <!-- Scroll down arrow -->
+      <div class="mt-12 animate-bounce">
+        <svg class="w-6 h-6 text-yellow-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM + INFO SECTION -->
+  <div id="contact" class="grid grid-cols-1 md:grid-cols-2">
+
+    <!-- LEFT — FORM -->
+    <div class="px-10 py-16 bg-gray-900 border-r border-white/10">
+      <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-2">Send us a message</p>
+      <h2 class="font-display text-4xl text-white mb-8">KEEP IN TOUCH</h2>
+
+      <div id="error" class="hidden bg-red-500/20 border border-red-500 text-red-400 text-sm px-4 py-3 rounded-md mb-6"></div>
+      <div id="success" class="hidden bg-green-500/20 border border-green-500 text-green-400 text-sm px-4 py-3 rounded-md mb-6"></div>
+
+      <form>
+        <div class="mb-5">
+          <label class="text-yellow-400 text-xs font-medium tracking-widest uppercase">Your Name*</label>
+          <input type="text" id="contactName" placeholder="Ali Hassan"
+            class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-3 mt-2 focus:outline-none focus:border-yellow-400 transition-colors">
+        </div>
+
+        <div class="mb-5">
+          <label class="text-yellow-400 text-xs font-medium tracking-widest uppercase">Your Email*</label>
+          <input type="email" id="contactEmail" placeholder="ali@email.com"
+            class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-3 mt-2 focus:outline-none focus:border-yellow-400 transition-colors">
+        </div>
+
+        <div class="mb-5">
+          <label class="text-yellow-400 text-xs font-medium tracking-widest uppercase">Phone*</label>
+          <input type="text" id="contactPhone" placeholder="+92 300 1234567"
+            class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-3 mt-2 focus:outline-none focus:border-yellow-400 transition-colors">
+        </div>
+
+        <!-- <div class="mb-5">
+          <label class="text-yellow-400 text-xs font-medium tracking-widest uppercase">Select Branch*</label>
+          <select id="contactBranch"
+            class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-3 mt-2 focus:outline-none focus:border-yellow-400 transition-colors appearance-none">
+            <option value="" disabled selected>Select a branch</option>
+            <option value="gulberg">Lahore — Gulberg</option>
+            <option value="johar">Lahore — Johar Town</option>
+            <option value="dha">Lahore — DHA</option>
+          </select>
+        </div> -->
+
+        <div class="mb-8">
+          <label class="text-yellow-400 text-xs font-medium tracking-widest uppercase">Message*</label>
+          <textarea id="contactMessage" rows="5" placeholder="Write your message here..."
+            class="w-full bg-gray-800 border border-gray-700 text-white rounded-md px-4 py-3 mt-2 focus:outline-none focus:border-yellow-400 transition-colors resize-none"></textarea>
+        </div>
+
+        <button type="button" onclick="submitContact()"
+          class="w-full bg-yellow-400 text-gray-900 font-semibold py-3 rounded-md hover:bg-yellow-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/30 transition-all duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+    <!-- RIGHT — INFO -->
+    <div class="px-10 py-16 bg-gray-900">
+      <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-2">Find us</p>
+      <h2 class="font-display text-4xl text-white mb-8">OUR LOCATION</h2>
+
+      <!-- Google Maps -->
+      <div class="rounded-md overflow-hidden mb-10 border border-white/10">
+      <iframe
+      src="https://maps.google.com/maps?q=31.5990042,74.3377407&z=16&output=embed"
+      width="100%" height="280"
+      style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
+      </div>
+
+      <!-- Address -->
+      <div class="mb-8 border-b border-white/10 pb-8">
+        <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-3">Address</p>
+        <p class="text-white font-medium">GolBagh Shadbagh</p>
+        <p class="text-gray-400 text-sm">Lahore, Pakistan</p>
+      </div>
+
+      <!-- Branches -->
+      <!-- <div class="mb-8 border-b border-white/10 pb-8">
+        <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-4">Our Branches</p>
+        <div class="flex flex-col gap-3">
+          <div class="flex justify-between items-center">
+            <span class="text-white text-sm font-medium">Gulberg</span>
+            <a href="tel:+923222295555" class="text-gray-400 text-sm hover:text-yellow-400 transition-colors">0322 2295555</a>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-white text-sm font-medium">Johar Town</span>
+            <a href="tel:+923222265559" class="text-gray-400 text-sm hover:text-yellow-400 transition-colors">0322 2265559</a>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-white text-sm font-medium">DHA</span>
+            <a href="tel:+923222255591" class="text-gray-400 text-sm hover:text-yellow-400 transition-colors">0322 2255591</a>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Email -->
+      <div class="mb-8 border-b border-white/10 pb-8">
+        <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-3">Email</p>
+        <a href="mailto:info@snapfitness.com" class="text-white hover:text-yellow-400 transition-colors text-sm">info@snapfitness.com</a>
+      </div>
+
+      <!-- Opening Hours -->
+      <div>
+        <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-4">Opening Hours</p>
+        <div class="flex flex-col gap-3 text-sm">
+          <div class="flex justify-between">
+            <span class="text-gray-400">Monday — Friday</span>
+            <span class="text-white">2:00 PM — 12:00 AM</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-400">Saturday</span>
+            <span class="text-white">2:00 PM — 10:00 PM</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-400">Sunday</span>
+            <span class="text-red-400">Closed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/40 px-10 py-6 flex justify-between items-center text-sm border-t border-white/10">
+    <div class="font-display text-cream text-xl tracking-widest">
+      Snap <span class="text-yellow-400">Fitness</span>
+    </div>
+    <div>© 2026 Snap Fitness Gym. All rights reserved.</div>
+  </footer>
+<script src="JS/contact.js"></script>
+
+</body>
+</html>

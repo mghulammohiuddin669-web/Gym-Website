@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Bebas Neue", "sans-serif"],
+            body: ["DM Sans", "sans-serif"],
+          },
+          colors: {
+            cream: "#f5f2ee",
+            ink: "#0f0f0f",
+            lime: "#c8ff00",
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .parallax-hero {
+      background-image: url('https://images.unsplash.com/photo-1603287681836-b174ce5074c2?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .exercise-card:hover .card-img {
+      transform: scale(1.06);
+    }
+  </style>
+  <title>Back Workout — Snap Fitness</title>
+</head>
+
+<body class="bg-gray-900 font-body">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 bg-gray-900/90 backdrop-blur-md border-b border-white/10">
+    <div class="w-[150px]">
+      <a href="index.html"><img src="IMG/snapFitness.png" alt="LOGO"/></a>
+    </div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a href="index.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Home</a>
+      <a href="index.html#exercise" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Exercises</a>
+      <a href="contact.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Contact</a>
+      
+    </div>
+  </nav>
+
+  <!-- PARALLAX HERO -->
+  <div class="parallax-hero h-screen flex items-center justify-center relative">
+    <div class="absolute inset-0 bg-black/65"></div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-yellow-400 text-sm tracking-widest uppercase font-medium mb-3">Snap Fitness</p>
+      <h1 class="font-display text-8xl md:text-[10rem] text-white leading-none">BACK</h1>
+      <p class="text-gray-300 mt-4 text-lg max-w-xl mx-auto">Build a wide, thick, powerful back — the foundation of a strong physique.</p>
+      <div class="flex gap-4 justify-center mt-8 flex-wrap">
+        <a href="#beginner" class="bg-green-500 text-white px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Beginner</a>
+        <a href="#intermediate" class="bg-yellow-400 text-gray-900 px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Intermediate</a>
+        <a href="#advanced" class="bg-red-500 text-white px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Advanced</a>
+      </div>
+      <div class="mt-12 animate-bounce">
+        <svg class="w-6 h-6 text-yellow-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY LEVEL NAV -->
+  <div class="sticky top-[72px] z-40 bg-gray-900/95 backdrop-blur-md border-b border-white/10 px-10 py-3 flex gap-6 overflow-x-auto">
+    <a href="#beginner" class="text-sm font-medium text-gray-400 hover:text-green-400 transition-colors whitespace-nowrap flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span> Beginner
+    </a>
+    <a href="#intermediate" class="text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-yellow-400 inline-block"></span> Intermediate
+    </a>
+    <a href="#advanced" class="text-sm font-medium text-gray-400 hover:text-red-400 transition-colors whitespace-nowrap flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-red-400 inline-block"></span> Advanced
+    </a>
+    <a href="#tips" class="text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-blue-400 inline-block"></span> Pro Tips
+    </a>
+  </div>
+
+  <!-- ─────────── BEGINNER ─────────── -->
+  <section id="beginner" class="px-10 py-20 border-b border-white/10">
+    <div class="flex items-center gap-4 mb-3">
+      <span class="w-3 h-3 rounded-full bg-green-400 inline-block"></span>
+      <p class="text-green-400 text-xs tracking-widest uppercase font-medium">Level 01</p>
+    </div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">BEGINNER</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Basic pulling strength, form control</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">3 days/week</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">3 sets</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">60–90s rest</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">Light–Moderate weight</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- 1. Lat Pulldown -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/latPuldown.jpg" alt="Lat Pulldown" class="card-img">
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">01</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">LAT PULLDOWN</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Best exercise for beginners to build lat width. Learn to drive elbows down and back — not just pull with arms.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">10–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lats</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Biceps</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=CAwf7n6Luuc" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Seated Cable Row -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/seatedCableRow.jpg" alt="Seated Cable Row" class="card-img">
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">02</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">SEATED CABLE ROW</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Builds mid-back thickness. Keep torso upright — no swinging. Pull to your lower abdomen and squeeze.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">10–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Mid Back</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Rhomboids</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=GZbfZ033f74" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Dumbbell Row -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/DumbellRow.jpg" alt="Dumbbell Row" class="card-img">
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">03</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">DUMBBELL ROW</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Unilateral movement — fixes imbalances. Brace one arm on bench, row the dumbbell to your hip, not your chest.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">10–12</p>
+              <p class="text-gray-400 text-xs">Each side</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lats</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Mid Back</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=pYcpY20QaE8" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Hyperextension -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/backExtension.jpg" alt="Hyperextension" class="card-img">
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">04</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">HYPEREXTENSION</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Strengthens the lower back and erector spinae. Essential for injury prevention and spinal health.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">12–15</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lower Back</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Glutes</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=ph3pddpKzzw" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────── INTERMEDIATE ─────────── -->
+  <section id="intermediate" class="px-10 py-20 border-b border-white/10 bg-gray-800/30">
+    <div class="flex items-center gap-4 mb-3">
+      <span class="w-3 h-3 rounded-full bg-yellow-400 inline-block"></span>
+      <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium">Level 02</p>
+    </div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">INTERMEDIATE</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Thickness + width development</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">4 days/week</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">3–4 sets</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">90s rest</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">Moderate–Heavy weight</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1. Pull-up -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/pullup.jpg" alt="Pull-up" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">01</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">PULL-UP</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">The ultimate test of back strength. Full range of motion — dead hang at bottom, chin over bar at top.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">6–10</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lats</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Biceps</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=eGo4IYlbE5g" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Barbell Row -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/barbell row.jpg" alt="Barbell Row" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">02</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">BARBELL ROW</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">The king of back thickness. Hinged at hips, bar pulled to lower abdomen. Heavy compound movement for serious mass.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">8–10</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Full Back</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Thickness</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=FWJR5Ve8bnQ" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Lat Pulldown -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/latPuldown2.jpg" alt="Lat Pulldown" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">03</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">LAT PULLDOWN</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Now go heavier with a wider grip. Focus on the full stretch at the top for maximum lat activation.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">10–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lats</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Width</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=CAwf7n6Luuc" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Seated Cable Row -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/images.jpg" alt="Seated Cable Row" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">04</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">SEATED CABLE ROW</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Add a 1-second pause at full contraction. Use a wide grip for more lat activation or V-bar for mid-back.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">10–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Mid Back</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Rhomboids</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=GZbfZ033f74" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. Face Pull -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/facepull.jpg" alt="Face Pull" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">05</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">FACE PULL</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Often overlooked but critical for rear delts and rotator cuff health. Pull rope to forehead level, elbows high.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">12–15</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Rear Delts</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Rotator Cuff</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=rep-qVOkqgk" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────── ADVANCED ─────────── -->
+  <section id="advanced" class="px-10 py-20 border-b border-white/10">
+    <div class="flex items-center gap-4 mb-3">
+      <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+      <p class="text-red-400 text-xs tracking-widest uppercase font-medium">Level 03</p>
+    </div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">ADVANCED</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Maximum thickness, width, strength</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">5 days/week</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">3–5 sets</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">60–120s rest</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">Heavy weight</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1. Deadlift -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/deadLift.jpg" alt="Deadlift" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">01</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">DEADLIFT</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">The most powerful full-body exercise. Builds an incredibly thick back from traps to lower back. Use a belt for heavy sets.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">5</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">3–6</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Full Back</span>
+            <span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">⚠ Heavy</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=op9kVnSso6Q" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Pull-up -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/pullupAdvance.jpg" alt="Pull-up" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">02</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">PULL-UP</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Add weight with a belt. 8–12 weighted reps builds far more muscle than 20 bodyweight reps. Control the descent.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">8–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lats</span>
+            <span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">Weighted</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=eGo4IYlbE5g" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Barbell Row -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/barbell row.jpg" alt="Barbell Row" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">03</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">BARBELL ROW</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Heavy overhand grip rows for maximum back thickness. Brace your core hard — your lower back is under serious load.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">6–10</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Thickness</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Traps</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=FWJR5Ve8bnQ" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. T-Bar Row -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/T-BarRow.jpg" alt="T-Bar Row" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">04</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">T-BAR ROW</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Incredible mid-back and lat builder. The neutral grip allows you to go heavier than standard rows with less wrist strain.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">8–10</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Mid Back</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lats</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=j3Igk5nyZE4" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. Straight Arm Pulldown -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/Pulldown.jpg  " alt="Straight Arm Pulldown" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">05</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">STRAIGHT ARM PULLDOWN</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Pure lat isolation — no bicep involvement. Arms stay straight throughout. Best finisher for a full lat pump.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">12–15</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lats</span>
+            <span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">🔥 Finisher</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=4kIPHssLKls" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRO TIPS -->
+  <section id="tips" class="px-10 py-20 bg-gray-800/30 border-b border-white/10">
+    <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-2">Expert Advice</p>
+    <h2 class="font-display text-5xl text-white mb-10">PRO TIPS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10">
+        <div class="text-3xl mb-4">🎯</div>
+        <h3 class="text-white font-semibold mb-2">Lead With Elbows</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">On every pulling movement, think "elbows to your back pockets" — not hands to chest. This activates lats instead of biceps.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10">
+        <div class="text-3xl mb-4">🤜</div>
+        <h3 class="text-white font-semibold mb-2">Use Straps</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Your grip will fail before your back on heavy rows. Use lifting straps to keep focus on the target muscle, not your hands.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10">
+        <div class="text-3xl mb-4">📐</div>
+        <h3 class="text-white font-semibold mb-2">Full Range of Motion</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Let your shoulder blades spread at the top of every pull. This full stretch activates more muscle fibers for greater growth.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10">
+        <div class="text-3xl mb-4">⚖️</div>
+        <h3 class="text-white font-semibold mb-2">Pull:Push Ratio</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">For every pressing session, do at least equal back work. Most people overtrain chest and underdevelop their back — balance it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVIGATION -->
+  <div class="px-10 py-10 flex items-center justify-between">
+    <a href="chest.html" class="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors text-sm font-medium">← Chest Exercises</a>
+    <a href="index.html#exercise" class="text-sm text-gray-400 hover:text-yellow-400 transition-colors">All Exercises</a>
+    <a href="bicep_tricep.html" class="text-sm text-gray-400 hover:text-yellow-400 transition-colors">Bicep/Tricep →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/40 px-10 py-6 flex justify-between items-center text-sm border-t border-white/10">
+    <div class="font-display text-cream text-xl tracking-widest">
+      Snap <span class="text-yellow-400">Fitness</span>
+    </div>
+    <div>© 2026 Snap Fitness Gym. All rights reserved.</div>
+  </footer>
+  <script src="JS/contact.js"></script>
+</body>
+</html>

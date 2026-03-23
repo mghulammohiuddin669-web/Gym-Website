@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Bebas Neue", "sans-serif"],
+            body: ["DM Sans", "sans-serif"],
+          },
+          colors: {
+            cream: "#f5f2ee",
+            ink: "#0f0f0f",
+            lime: "#c8ff00",
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .parallax-hero {
+      background-image: url('IMG/sideChestPOse.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .exercise-card:hover .card-img {
+      transform: scale(1.06);
+    }
+  </style>
+  <title>Chest Workout — Snap Fitness</title>
+</head>
+
+<body class="bg-gray-900 font-body">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 bg-gray-900/90 backdrop-blur-md border-b border-white/10">
+    <div class="w-[150px]">
+      <a href="index.html"><img src="IMG/snapFitness.png" alt="LOGO"/></a>
+    </div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a href="index.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Home</a>
+      <a href="index.html#exercise" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Exercises</a>
+      <a href="contact.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Contact</a>
+      
+    </div>
+  </nav>
+  
+
+  <!-- PARALLAX HERO -->
+  <div class="parallax-hero h-screen flex items-center justify-center relative">
+    <div class="absolute inset-0 bg-black/65"></div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-yellow-400 text-sm tracking-widest uppercase font-medium mb-3">Snap Fitness</p>
+      <h1 class="font-display text-8xl md:text-[10rem] text-white leading-none">CHEST</h1>
+      <p class="text-gray-300 mt-4 text-lg max-w-xl mx-auto">Build a powerful, defined chest — exercises designed for every level.</p>
+      <div class="flex gap-4 justify-center mt-8 flex-wrap">
+        <a href="#beginner" class="bg-green-500 text-white px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Beginner</a>
+        <a href="#intermediate" class="bg-yellow-400 text-gray-900 px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Intermediate</a>
+        <a href="#advanced" class="bg-red-500 text-white px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Advanced</a>
+      </div>
+      <div class="mt-12 animate-bounce">
+        <svg class="w-6 h-6 text-yellow-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY LEVEL NAV -->
+  <div class="sticky top-[72px] z-40 bg-gray-900/95 backdrop-blur-md border-b border-white/10 px-10 py-3 flex gap-6 overflow-x-auto">
+    <a href="#beginner" class="text-sm font-medium text-gray-400 hover:text-green-400 transition-colors whitespace-nowrap flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span> Beginner
+    </a>
+    <a href="#intermediate" class="text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-yellow-400 inline-block"></span> Intermediate
+    </a>
+    <a href="#advanced" class="text-sm font-medium text-gray-400 hover:text-red-400 transition-colors whitespace-nowrap flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-red-400 inline-block"></span> Advanced
+    </a>
+    <a href="#tips" class="text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-blue-400 inline-block"></span> Pro Tips
+    </a>
+  </div>
+
+  <!-- ─────────── BEGINNER ─────────── -->
+  <section id="beginner" class="px-10 py-20 border-b border-white/10">
+    <div class="flex items-center gap-4 mb-3">
+      <span class="w-3 h-3 rounded-full bg-green-400 inline-block"></span>
+      <p class="text-green-400 text-xs tracking-widest uppercase font-medium">Level 01</p>
+    </div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">BEGINNER</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Form, control, mind-muscle connection</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">3 days/week</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">3 sets</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">60–90s rest</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">Light–Moderate weight</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- 1. Flat Bench Press -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/FLAT BENCH PRESS.jpg" alt="Flat Bench Press" class="card-img">
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">01</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">FLAT BENCH PRESS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">The foundation of chest training. Builds overall strength and thickness across the full chest.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">8–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Full Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Triceps</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=vcBig73ojpE" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Incline Dumbbell Press -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/INCLINE DUMBBELL PRESS.jpg" alt="Incline Dumbbell Press" class="card-img">
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">02</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">INCLINE DUMBBELL PRESS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Targets the upper chest. Each arm works independently, fixing muscular imbalances.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">10–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Upper Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Front Delts</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=8iPEnn-ltC8" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Machine Chest Press -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/Machine chest press.jpeg" alt="Machine Chest Press" class="card-img">
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">03</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">MACHINE CHEST PRESS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Guided path removes stabilizer demand. Perfect for beginners to feel the chest contract safely.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">10–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Full Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Safe</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=xUm0BiZCWlQ" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Push Up -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/pushUps.jpg" alt="Push Up" class="card-img">
+          <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">04</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">PUSH-UP</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">No equipment needed. Builds core stability and chest endurance. Perfect to finish off your workout.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-green-400 font-display text-lg">8–15</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Core</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=IODxDxX7oi4" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────── INTERMEDIATE ─────────── -->
+  <section id="intermediate" class="px-10 py-20 border-b border-white/10 bg-gray-800/30">
+    <div class="flex items-center gap-4 mb-3">
+      <span class="w-3 h-3 rounded-full bg-yellow-400 inline-block"></span>
+      <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium">Level 02</p>
+    </div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">INTERMEDIATE</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Progressive overload, upper chest focus, volume increase</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">4 days/week</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">3–4 sets</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">90s rest</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">Moderate–Heavy weight</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1. Flat Bench Press -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/FLAT BENCH PRESS.jpg" alt="Flat Bench Press" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">01</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">FLAT BENCH PRESS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Now go heavier. Focus on controlled eccentric (lowering) phase — 3 seconds down, explosive up.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">6–10</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Full Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Strength</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=vcBig73ojpE" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Incline Bench Press -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/Inclined benchpress.jpg" alt="Incline Bench Press" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">02</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">INCLINE BENCH PRESS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Barbell incline version allows heavier loading than dumbbells. Critical for upper chest development.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">8–10</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Upper Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Front Delts</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=DbFgADa2PL8" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Dumbbell Fly -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/dumbellFly.jpg" alt="Dumbbell Fly" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">03</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">DUMBBELL FLY</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Pure isolation. Stretch the chest at the bottom for maximum muscle fiber activation and width.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">10–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Inner Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Width</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=eozdVDA78K0" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Cable Crossover -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/CabelCorss.jpg" alt="Cable Crossover" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">04</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">CABLE CROSSOVER</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Constant tension throughout the movement. Superior to dumbbells for chest definition and inner chest work.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">12–15</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Definition</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Inner Chest</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=taI4XduLpTk" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. Chest Dip -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/chestDips.jpg" alt="Chest Dip" class="card-img">
+          <span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">05</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">CHEST DIP</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Lean forward to shift focus to lower chest. A compound bodyweight movement that builds serious thickness.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-yellow-400 font-display text-lg">8–12</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lower Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Triceps</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=2z8JmcrW-As" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────── ADVANCED ─────────── -->
+  <section id="advanced" class="px-10 py-20 border-b border-white/10">
+    <div class="flex items-center gap-4 mb-3">
+      <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+      <p class="text-red-400 text-xs tracking-widest uppercase font-medium">Level 03</p>
+    </div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">ADVANCED</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Intensity, full chest development, muscle fatigue</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">5 days/week</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">4–5 sets</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">2–3 min rest</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">Heavy weight</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1. Flat Bench Press -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/FLAT BENCH PRESS.jpg" alt="Flat Bench Press" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">01</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">FLAT BENCH PRESS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Max loading. Use a spotter. Work in the 4–8 rep range with 85–90% of your 1RM for pure strength and mass.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">5</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">4–8</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Max Strength</span>
+            <span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">Heavy</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=vcBig73ojpE" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Incline Dumbbell Press -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/INCLINE DUMBBELL PRESS.jpg" alt="Incline Dumbbell Press" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">02</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">INCLINE DUMBBELL PRESS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Heavy dumbbell incline with a full range of motion and a 2-second pause at the bottom for maximum stretch.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">8–10</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Upper Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Volume</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=8iPEnn-ltC8" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Decline Bench Press -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/declinedBenchPress.jpg" alt="Decline Bench Press" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">03</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">DECLINE BENCH PRESS</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">You can lift more on decline than flat — overloads the lower chest with maximum weight safely.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">8–10</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lower Chest</span>
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Overload</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=LfyQBUKR8SE" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Cable Crossover -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/CabelCorss.jpg" alt="Cable Crossover" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">04</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">CABLE CROSSOVER</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">4 sets with peak contraction squeezes. Add a drop set on the last set — reduce weight by 30% and go to failure.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">4</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">12–15</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Definition</span>
+            <span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">Drop Set</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=taI4XduLpTk" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. Chest Dip to Failure -->
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative">
+          <img src="IMG/chestDips.jpg" alt="Chest Dip" class="card-img">
+          <span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">05</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl text-white mb-1">CHEST DIP — FAILURE</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">The ultimate finisher. 3 sets to absolute failure — burns out every last chest fiber. Add weight if bodyweight is too easy.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center">
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">3</p>
+              <p class="text-gray-400 text-xs">Sets</p>
+            </div>
+            <div class="bg-gray-700 rounded-md py-2">
+              <p class="text-red-400 font-display text-lg">Failure</p>
+              <p class="text-gray-400 text-xs">Reps</p>
+            </div>
+          </div>
+          <div class="flex gap-1 flex-wrap mb-4">
+            <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lower Chest</span>
+            <span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">🔥 Burnout</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=2z8JmcrW-As" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRO TIPS -->
+  <section id="tips" class="px-10 py-20 bg-gray-800/30 border-b border-white/10">
+    <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-2">Expert Advice</p>
+    <h2 class="font-display text-5xl text-white mb-10">PRO TIPS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10">
+        <div class="text-3xl mb-4">🎯</div>
+        <h3 class="text-white font-semibold mb-2">Mind-Muscle Connection</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Focus on feeling your chest squeeze — not just moving the weight. This alone can double your results.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10">
+        <div class="text-3xl mb-4">📈</div>
+        <h3 class="text-white font-semibold mb-2">Progressive Overload</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Add 2.5kg every 2 weeks. Your chest won't grow without giving it a reason to adapt and get stronger.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10">
+        <div class="text-3xl mb-4">😴</div>
+        <h3 class="text-white font-semibold mb-2">Rest & Recovery</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Muscles grow during rest, not training. Give 48–72 hours between chest sessions.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10">
+        <div class="text-3xl mb-4">🥩</div>
+        <h3 class="text-white font-semibold mb-2">Protein Intake</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Eat 1.6–2.2g of protein per kg of bodyweight daily. No protein = no muscle growth, period.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK LINK -->
+  <div class="px-10 py-10 flex items-center justify-between">
+    <a href="index.html#exercise" class="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors text-sm font-medium">← Back to All Exercises</a>
+    <a href="back.html" class="text-sm text-gray-400 hover:text-yellow-400 transition-colors">Back Exercises →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/40 px-10 py-6 flex justify-between items-center text-sm border-t border-white/10">
+    <div class="font-display text-cream text-xl tracking-widest">
+      Snap <span class="text-yellow-400">Fitness</span>
+    </div>
+    <div>© 2026 Snap Fitness Gym. All rights reserved.</div>
+  </footer>
+  <script src="JS/contact.js"></script>
+</body>
+</html>

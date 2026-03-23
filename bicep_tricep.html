@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { display: ["Bebas Neue", "sans-serif"], body: ["DM Sans", "sans-serif"] },
+          colors: { cream: "#f5f2ee", ink: "#0f0f0f", lime: "#c8ff00" },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .parallax-hero { background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1600&q=80'); background-size: cover; background-position: center; background-attachment: fixed; }
+    .card-img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.5s ease; }
+    .exercise-card:hover .card-img { transform: scale(1.06); }
+  </style>
+  <title>Bicep/Tricep — Snap Fitness</title>
+</head>
+<body class="bg-gray-900 font-body">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 bg-gray-900/90 backdrop-blur-md border-b border-white/10">
+    <div class="w-[150px]"><a href="index.html"><img src="IMG/snapFitness.png" alt="LOGO"/></a></div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a href="index.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Home</a>
+      <a href="index.html#exercise" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Exercises</a>
+      <a href="contact.html" class="text-sm font-medium text-white hover:text-yellow-400 transition-colors">Contact</a>
+      
+    </div>
+  </nav>
+
+  <div class="parallax-hero h-screen flex items-center justify-center relative">
+    <div class="absolute inset-0 bg-black/65"></div>
+    <div class="relative z-10 text-center px-4">
+      <p class="text-yellow-400 text-sm tracking-widest uppercase font-medium mb-3">Snap Fitness</p>
+      <h1 class="font-display text-6xl md:text-9xl text-white leading-none">BICEP/<br>TRICEP</h1>
+      <p class="text-gray-300 mt-4 text-lg max-w-xl mx-auto">Build sleeve-filling arms — train both sides of your arm equally for balanced size and strength.</p>
+      <div class="flex gap-4 justify-center mt-8 flex-wrap">
+        <a href="#beginner" class="bg-green-500 text-white px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Beginner</a>
+        <a href="#intermediate" class="bg-yellow-400 text-gray-900 px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Intermediate</a>
+        <a href="#advanced" class="bg-red-500 text-white px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300 rounded-md">Advanced</a>
+      </div>
+      <div class="mt-12 animate-bounce"><svg class="w-6 h-6 text-yellow-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></div>
+    </div>
+  </div>
+
+  <div class="sticky top-[72px] z-40 bg-gray-900/95 backdrop-blur-md border-b border-white/10 px-10 py-3 flex gap-6 overflow-x-auto">
+    <a href="#beginner" class="text-sm font-medium text-gray-400 hover:text-green-400 transition-colors whitespace-nowrap flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span> Beginner</a>
+    <a href="#intermediate" class="text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-yellow-400 inline-block"></span> Intermediate</a>
+    <a href="#advanced" class="text-sm font-medium text-gray-400 hover:text-red-400 transition-colors whitespace-nowrap flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400 inline-block"></span> Advanced</a>
+    <a href="#tips" class="text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors whitespace-nowrap flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-400 inline-block"></span> Pro Tips</a>
+  </div>
+
+  <!-- BEGINNER -->
+  <section id="beginner" class="px-10 py-20 border-b border-white/10">
+    <div class="flex items-center gap-4 mb-3"><span class="w-3 h-3 rounded-full bg-green-400 inline-block"></span><p class="text-green-400 text-xs tracking-widest uppercase font-medium">Level 01</p></div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">BEGINNER</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Elbow isolation, form, equal bicep & tricep training</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">3 sets</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">60s rest</span>
+      <span class="bg-green-400/10 text-green-400 text-xs px-3 py-1 rounded-full border border-green-400/30">Light weight</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/BarbellCurls.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">01</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">BARBELL CURL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">The classic bicep builder. Keep elbows fixed at sides, full range of motion — squeeze at top, slow on the way down.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Biceps</span></div>
+          <a href="https://www.youtube.com/watch?v=kwG2ipFRgfo" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/dumbellCurfls.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">02</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">DUMBBELL CURL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Alternate arms for better focus. Supinate (rotate) your wrist as you curl up to fully contract the bicep.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Biceps</span></div>
+          <a href="https://www.youtube.com/watch?v=sAq_ocpRh_I" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/TricepPushDown.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">03</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">TRICEP PUSHDOWN</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Cable pushdown — elbows stay at sides, push the bar down and squeeze at the bottom. Don't flare elbows.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Triceps</span></div>
+          <a href="https://www.youtube.com/watch?v=2-LAMcpzODU" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-green-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/OverHeadTricep.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">04</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">OVERHEAD TRICEP EXTENSION</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Stretches the long head of the tricep — the largest portion. Use dumbbell or EZ bar overhead, lower behind head.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-green-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Long Head</span></div>
+          <a href="https://www.youtube.com/watch?v=_gsUck-7M74" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERMEDIATE -->
+  <section id="intermediate" class="px-10 py-20 border-b border-white/10 bg-gray-800/30">
+    <div class="flex items-center gap-4 mb-3"><span class="w-3 h-3 rounded-full bg-yellow-400 inline-block"></span><p class="text-yellow-400 text-xs tracking-widest uppercase font-medium">Level 02</p></div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">INTERMEDIATE</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Peak bicep development, tricep mass, strength increase</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">3–4 sets</span>
+      <span class="bg-yellow-400/10 text-yellow-400 text-xs px-3 py-1 rounded-full border border-yellow-400/30">60–90s rest</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/BarbellCurls.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">01</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">BARBELL CURL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Heavier load now. Add a 2-second pause at peak contraction and a slow 3-second descent for maximum tension.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">8–10</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Biceps</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Strength</span></div>
+          <a href="https://www.youtube.com/watch?v=kwG2ipFRgfo" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/hammerCurls.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">02</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">HAMMER CURL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Neutral grip targets brachialis and brachioradialis — adds thickness and width to the arm beyond just the bicep peak.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Brachialis</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Forearms</span></div>
+          <a href="https://www.youtube.com/watch?v=TwD-YGVP4Bk" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/preacherCurls.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">03</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">PREACHER CURL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Arm rests on pad — eliminates cheating. Isolates the lower bicep head for a fuller, more complete look.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Lower Bicep</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Isolation</span></div>
+          <a href="https://www.youtube.com/watch?v=fIWP-FRFNU0" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/clossGripBenchpress.jpeg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">04</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">CLOSE GRIP BENCH PRESS</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Best compound tricep exercise. Hands shoulder-width, elbows tucked in — loads the triceps with heavy weight.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">8–10</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Triceps</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Mass</span></div>
+          <a href="https://www.youtube.com/watch?v=nEF0bv2FW94" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/TricepPushDown.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">05</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">TRICEP PUSHDOWN</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Use rope attachment for better range of motion — split the rope at the bottom for maximum tricep contraction.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">3</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-yellow-400 font-display text-lg">12–15</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Triceps</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Definition</span></div>
+          <a href="https://www.youtube.com/watch?v=2-LAMcpzODU" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANCED -->
+  <section id="advanced" class="px-10 py-20 border-b border-white/10">
+    <div class="flex items-center gap-4 mb-3"><span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span><p class="text-red-400 text-xs tracking-widest uppercase font-medium">Level 03</p></div>
+    <h2 class="font-display text-6xl md:text-7xl text-white mb-2">ADVANCED</h2>
+    <p class="text-gray-400 max-w-2xl mb-2">Goal: <span class="text-white font-medium">Maximum arm size, strength, and definition</span></p>
+    <div class="flex gap-4 mb-10 flex-wrap">
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">4–5 sets</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">60–90s rest</span>
+      <span class="bg-red-400/10 text-red-400 text-xs px-3 py-1 rounded-full border border-red-400/30">Heavy</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/BarbellCurls.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">01</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">BARBELL CURL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Max bicep strength — work up to heavy sets of 6–8. Add a drop set on the final set for maximum volume.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">5</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">6–8</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Biceps</span><span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">Heavy</span></div>
+          <a href="https://www.youtube.com/watch?v=kwG2ipFRgfo" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/InclinedDumbelCurls.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">02</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">INCLINE DUMBBELL CURL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Lying back on incline bench — full stretch at bottom. This stretched position recruits more long head fibers for a bigger peak.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">8–10</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Long Head</span><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Peak</span></div>
+          <a href="https://www.youtube.com/watch?v=MkXMOP1tEQI" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/hammerCurls.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">03</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">HAMMER CURL</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Heavy hammer curls for brachialis thickness. Thicker brachialis pushes the bicep up — making your peak look bigger.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">10–12</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Brachialis</span></div>
+          <a href="https://www.youtube.com/watch?v=TwD-YGVP4Bk" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/clossGripBenchpress.jpeg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">04</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">CLOSE GRIP BENCH PRESS</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">Max tricep strength. Work up to 85% of your regular bench. Use a spotter — this is a heavy compound movement.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">6–8</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Triceps</span><span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">Heavy</span></div>
+          <a href="https://www.youtube.com/watch?v=nEF0bv2FW94" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+      <div class="exercise-card bg-gray-800 rounded-xl overflow-hidden border border-white/10 hover:border-red-400/50 transition-all duration-300">
+        <div class="overflow-hidden relative"><img src="IMG/skullCruher.jpg" alt="" class="card-img"><span class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">05</span></div>
+        <div class="p-5"><h3 class="font-display text-xl text-white mb-1">SKULL CRUSHER</h3><p class="text-gray-400 text-xs leading-relaxed mb-4">EZ bar lowered to forehead on bench. Maximum stretch on all three tricep heads. Control the descent carefully.</p>
+          <div class="grid grid-cols-2 gap-2 mb-4 text-center"><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">4</p><p class="text-gray-400 text-xs">Sets</p></div><div class="bg-gray-700 rounded-md py-2"><p class="text-red-400 font-display text-lg">8–10</p><p class="text-gray-400 text-xs">Reps</p></div></div>
+          <div class="flex gap-1 flex-wrap mb-4"><span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">All 3 Heads</span><span class="text-xs bg-red-400/10 text-red-400 px-2 py-1 rounded">🔥 Intense</span></div>
+          <a href="https://www.youtube.com/watch?v=d_KZxkY_0cM" target="_blank" class="flex items-center gap-2 text-yellow-400 text-xs font-medium hover:gap-3 transition-all duration-300"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Watch Tutorial</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO TIPS -->
+  <section id="tips" class="px-10 py-20 bg-gray-800/30 border-b border-white/10">
+    <p class="text-yellow-400 text-xs tracking-widest uppercase font-medium mb-2">Expert Advice</p>
+    <h2 class="font-display text-5xl text-white mb-10">PRO TIPS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10"><div class="text-3xl mb-4">⚖️</div><h3 class="text-white font-semibold mb-2">Train Both Equally</h3><p class="text-gray-400 text-sm leading-relaxed">Triceps make up 2/3 of your arm. Most people overtrain biceps and underdevelop triceps — balance your training.</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10"><div class="text-3xl mb-4">🎯</div><h3 class="text-white font-semibold mb-2">No Swinging</h3><p class="text-gray-400 text-sm leading-relaxed">Momentum steals work from your biceps. Stand against a wall when curling to eliminate body swing entirely.</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10"><div class="text-3xl mb-4">📐</div><h3 class="text-white font-semibold mb-2">Full Range of Motion</h3><p class="text-gray-400 text-sm leading-relaxed">Full extension at the bottom of every curl and every pushdown. Partial reps build partial muscles.</p></div>
+      <div class="bg-gray-800 p-6 rounded-xl border border-white/10"><div class="text-3xl mb-4">🔥</div><h3 class="text-white font-semibold mb-2">Superset Them</h3><p class="text-gray-400 text-sm leading-relaxed">Superset bicep and tricep exercises for a massive pump — they don't compete, so no rest is needed between them.</p></div>
+    </div>
+  </section>
+
+  <div class="px-10 py-10 flex items-center justify-between">
+    <a href="shoulders.html" class="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors text-sm font-medium">← Shoulders</a>
+    <a href="index.html#exercise" class="text-sm text-gray-400 hover:text-yellow-400 transition-colors">All Exercises</a>
+    <a href="abs.html" class="text-sm text-gray-400 hover:text-yellow-400 transition-colors">Abs →</a>
+  </div>
+
+  <footer class="bg-ink text-white/40 px-10 py-6 flex justify-between items-center text-sm border-t border-white/10">
+    <div class="font-display text-cream text-xl tracking-widest">Snap <span class="text-yellow-400">Fitness</span></div>
+    <div>© 2026 Snap Fitness Gym. All rights reserved.</div>
+  </footer>
+
+  <script src="JS/contact.js"></script>
+</body>
+</html>
